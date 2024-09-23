@@ -4,9 +4,9 @@
 
 // Recursive fib(); fib(1) == 0
 int rfib(int num) {
-   if (num == 1) {
+   if (num <= 1) {
       return 0;
-   } else if (num <= 2) {
+   } else if (num == 2) {
       return 1;
    }
 
@@ -15,7 +15,7 @@ int rfib(int num) {
 
 // Iterative fib(); fib(1) == 0
 int ifib(int num) {
-   if (num == 1) {
+   if (num <= 1) {
       return 0;
    } else if (num == 2) {
       return 1;                       
