@@ -3,21 +3,21 @@
 #include <string.h>
 
 // Recursive fib(); fib(1) == 0
-int rfib(int n) {
-   if (n == 1) {
+int rfib(int num) {
+   if (num == 1) {
       return 0;
-   } else if (n <= 2) {
+   } else if (num <= 2) {
       return 1;
    }
 
-   return rfib(n - 1) + rfib(n - 2);
+   return rfib(num - 1) + rfib(num - 2);
 }                                   
 
 // Iterative fib(); fib(1) == 0
-int ifib(int n) {
-   if (n == 1) {
+int ifib(int num) {
+   if (num == 1) {
       return 0;
-   } else if (n == 2) {
+   } else if (num == 2) {
       return 1;                       
    }
 
@@ -25,7 +25,7 @@ int ifib(int n) {
    int current = 1;
    int result = 0;                    
 
-   for (int ix = 3; ix <= n; ++ix) {
+   for (int ix = 3; ix <= num; ++ix) {
       result = previous + current;
       previous = current;
       current = result;
