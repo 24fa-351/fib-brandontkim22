@@ -45,6 +45,12 @@ int ifib(int number)
 
 int main(int argc, char *argv[])
 {
+   if (argc != 4)
+   {
+      printf("Usage: %s <fibonacci_input> <method_type> <file_name>\n", argv[0]);
+      return 1;
+   }
+
    int fibonacci_input;
    sscanf(argv[1], "%d", &fibonacci_input);
 
